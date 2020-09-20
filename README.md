@@ -1,5 +1,8 @@
+This is a clone of the Netflix app using React.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Author
+Loucif RAKEM
 ## Available Scripts
 
 In the project directory, you can run:
