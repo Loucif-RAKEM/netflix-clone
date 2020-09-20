@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "./axios";
+import "./Row.css";
 
 const baseUrl = "https://image.tmdb.org/t/p/original/";
-function Row({ title, fetchUrl }) {
+function Row({ title, fetchUrl, isLarge }) {
   const [movies, setmovies] = useState([]);
 
   useEffect(() => {
@@ -14,7 +15,7 @@ function Row({ title, fetchUrl }) {
     fetchData();
   }, [fetchUrl]);
 
-  console.log(movies);
+  //   console.log(movies);
 
   return (
     <div className="row">
@@ -22,8 +23,11 @@ function Row({ title, fetchUrl }) {
       <div className="row_posters">
         {movies.map((movie) => (
           <img
-            className={"row_poster"}
-            src={`${baseUrl}${movie.poster_path}`}
+            key={movie.id}
+            className={`row_poster ${isLarge && "row_posterLarger"}`}
+            src={`${baseUrl}${
+              isLarge ? movie.poster_path : movie.backdrop_path
+            }`}
             alt={movie.name}
           />
         ))}
