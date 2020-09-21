@@ -11,6 +11,7 @@
 .tmdb_logo {
   object-fit: contain;
   width: 12vw;
+  transition: all 450ms;
 }
 .name {
   font-size: 1.02rem;
@@ -33,11 +34,12 @@
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .footer {
-    position: relative;
-    top: 150px;
-    width: 99vw;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+  }
+
+  .tmdb_logo {
+    width: 28vw;
   }
 }

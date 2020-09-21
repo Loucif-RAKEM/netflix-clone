@@ -4,7 +4,7 @@ import axios from "./axios";
 import requests from "./requests";
 
 function Banner() {
-  const baseUrl = "https://image.tmdb.org/t/p/original/";
+  const baseUrl = "http://image.tmdb.org/t/p/original/";
 
   const [bannerMovie, setBannerMovie] = useState({});
   // generate one random movie for the main banner
@@ -19,7 +19,6 @@ function Banner() {
     }
     fetchData();
   }, []);
-  console.log(bannerMovie);
 
   // function used to trucate long strings (It also adds ... at the end)
   const truncate = (str, n) =>
