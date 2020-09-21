@@ -1,0 +1,43 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  color: white;
+  padding: 20px 10px;
+  font-size: 1.08rem;
+}
+
+.tmdb_logo {
+  object-fit: contain;
+  width: 12vw;
+}
+.name {
+  font-size: 1.02rem;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.buttons a {
+  margin-left: 5px;
+}
+
+.footer_icon {
+  color: lightgrey;
+  transition: transform 450ms;
+}
+
+.footer_icon:hover {
+  transform: scale(1.08);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .footer {
+    position: relative;
+    top: 150px;
+    width: 99vw;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
