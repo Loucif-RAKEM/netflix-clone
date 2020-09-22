@@ -32,10 +32,22 @@ function Row({ title, fetchUrl, isLarge }) {
     if (trailerUrl !== "") {
       setTrailerUrl("");
     } else {
-      movieTrailer(movie?.name || "")
+      console.log(
+        movie?.name ||
+          movie?.original_name ||
+          movie?.title ||
+          movie?.original_title
+      );
+      movieTrailer(
+        movie?.name ||
+          movie?.original_name ||
+          movie?.title ||
+          movie?.original_title ||
+          ""
+      )
         .then((url) => {
+          console.log("hello " + url);
           const urlParams = new URLSearchParams(new URL(url).search);
-          console.log(urlParams.get("v"));
           setTrailerUrl(urlParams.get("v"));
         })
         .catch((err) => console.log(err));
