@@ -1,45 +1,48 @@
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #111;
   color: white;
-  padding: 20px 10px;
-  font-size: 1.08rem;
+  font-family: "Play", sans-serif;
+  height: 100px;
 }
 
 .tmdb_logo {
   object-fit: contain;
-  width: 12vw;
+  width: 8vw;
   transition: all 450ms;
 }
 .name {
   font-size: 1.02rem;
   font-weight: bolder;
-  font-style: italic;
 }
 
 .buttons a {
-  margin-left: 5px;
+  margin-left: 20px;
 }
 
 .footer_icon {
   color: lightgrey;
-  transition: transform 450ms;
+  transition: transform 450ms !important;
 }
 
 .footer_icon:hover {
-  transform: scale(1.08);
+  transform: scale(1.08) !important;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .footer {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-around;
   }
 
   .tmdb_logo {
-    width: 28vw;
+    width: 26vw;
+  }
+  .buttons a {
+    margin-left: 20px;
   }
 }
