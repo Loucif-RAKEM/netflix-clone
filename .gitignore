@@ -23,3 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 /src/config.js
+
+## firebase
+.firebaserc
+/firebase.json
+*.cache
