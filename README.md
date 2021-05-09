@@ -1,6 +1,18 @@
 This is a clone of the Netflix app using React.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# ### Important \###
+
+Before you run this Project, please add a config.js file at /src folder which contains the following :
+
+```
+export default {
+    API_KEY: "PASTE Your TMDB API ACCESS KEY HERE"
+}
+
+```
+Otherwise the app will not be able to retrieve data from the TMDB API.
+
 ## Author
 
 Loucif RAKEM
